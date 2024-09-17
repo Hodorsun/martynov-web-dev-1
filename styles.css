@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Подключенный шрифт */
+    background-color: #f4f4f4; /* Цвет фона */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #35424a; /* Цвет фона шапки */
+    color: #ffffff; /* Цвет текста */
+    padding: 15px; /* Отступы */
+    text-align: center; /* Выравнивание */
+}
+
+nav ul {
+    list-style: none; /* Убираем маркеры */
+    padding: 0; /* Убираем отступы */
+}
+
+nav ul li {
+    display: inline; /* Горизонтальное расположение */
+    margin: 0 15px; /* Отступы между пунктами */
+}
+
+nav a {
+    color: #ffffff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-family: 'Roboto', sans-serif; /* Шрифт для навигации */
+    font-size: 16px; /* Размер шрифта для ссылок */
+}
+
+nav a:hover {
+    color: #f0a500; /* Цвет текста при наведении */
+}
+
+main {
+    padding: 20px; /* Отступы для основного содержимого */
+}
+
+section {
+    margin: 20px 0; /* Отступы между секциями */
+    background: #ffffff; /* Цвет фона секций */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Тень */
+}
+
+section img {
+    width: 100%; /* Ширина картинки */
+    height: auto; /* Автоматическая высота */
+    max-width: 400px; /* Максимальная ширина изображения */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+table, th, td {
+    border: 1px solid #cccccc; /* Границы таблицы */
+}
+
+th, td {
+    padding: 10px; /* Отступы для ячеек */
+    text-align: left; /* Выравнивание текста */
+}
+
+footer {
+    background-color: black; /* Цвет фона футера */
+    color: white; /* Цвет текста футера */
+    text-align: center; /* Выравнивание текста футера */
+    padding: 20px 0; /* Отступы в футере */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+footer a {
+    color: white; /* Цвет ссылок в футере */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+footer a:hover {
+    color: #f0a500; /* Цвет ссылок при наведении */
+}

@@ -61,6 +61,65 @@
     }
 }
 
+#order-form {
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    margin-bottom: 350px;
+}
+
+
+.order-section, .customer-section {
+    flex: 1; /* Equal width columns */
+}
+
+    .order-section div, .customer-section div {
+        margin-bottom: 10px;
+    }
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input, textarea, fieldset{
+    width: 65%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+legend {
+    font-weight: bold;
+}
+
+#order-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    #order-button:hover {
+        background-color: #45a049;
+    }
+
 @media (max-width: 600px) {
     .dishes-container {
         grid-template-columns: 1fr;
@@ -71,5 +130,16 @@
 @media (max-width: 400px) {
     table {
         font-size: 14px;
+    }
+}
+
+/*Responsive adjustments (example - adjust as needed)*/
+@media (max-width: 768px) {
+    #order-form {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+
+    .order-section, .customer-section {
+        flex: 0 0 auto; /*remove flex-grow*/
     }
 }

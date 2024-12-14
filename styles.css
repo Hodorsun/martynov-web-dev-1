@@ -51,7 +51,6 @@ nav a {
 main {
     flex-grow: 1;
     padding: 20px; /* Отступы для основного содержимого */
-    margin-bottom: 200px;
 }
 
 section {

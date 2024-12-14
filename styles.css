@@ -1,4 +1,4 @@
-* {
+• {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,24 +8,30 @@ body {
     font-family: 'Roboto', sans-serif; /* Подключенный шрифт */
     background-color: #f4f4f4; /* Цвет фона */
     line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background-color: #35424a; /* Цвет фона шапки */
     color: #ffffff; /* Цвет текста */
     padding: 15px; /* Отступы */
-    text-align: center; /* Выравнивание */
+    text-align: left;
 }
 
 nav ul {
     list-style: none; /* Убираем маркеры */
     padding: 0; /* Убираем отступы */
+    display: flex;
+    justify-content: left;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline; /* Горизонтальное расположение */
-    margin: 0 15px; /* Отступы между пунктами */
-}
+    nav ul li {
+        display: inline; /* Горизонтальное расположение */
+    }
 
 nav a {
     color: #ffffff; /* Цвет ссылок */
@@ -34,12 +40,18 @@ nav a {
     font-size: 16px; /* Размер шрифта для ссылок */
 }
 
-nav a:hover {
-    color: #f0a500; /* Цвет текста при наведении */
-}
+    nav a:hover {
+        color: #f0a500; /* Цвет текста при наведении */
+    }
+
+    nav a.active {
+        color: tomato;
+    }
 
 main {
+    flex-grow: 1;
     padding: 20px; /* Отступы для основного содержимого */
+    margin-bottom: 200px;
 }
 
 section {
@@ -48,13 +60,6 @@ section {
     padding: 20px; /* Внутренние отступы */
     border-radius: 5px; /* Закругленные углы */
     box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Тень */
-}
-
-section img {
-    width: 100%; /* Ширина картинки */
-    height: auto; /* Автоматическая высота */
-    max-width: 400px; /* Максимальная ширина изображения */
-    margin-bottom: 15px; /* Отступ снизу */
 }
 
 table {
@@ -78,13 +83,53 @@ footer {
     text-align: center; /* Выравнивание текста футера */
     padding: 20px 0; /* Отступы в футере */
     margin-top: 20px; /* Отступ сверху */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
-footer a {
-    color: white; /* Цвет ссылок в футере */
-    text-decoration: none; /* Убираем подчеркивание */
+    footer a {
+        color: white; /* Цвет ссылок в футере */
+        text-decoration: none; /* Убираем подчеркивание */
+    }
+
+        footer a:hover {
+            color: #f0a500; /* Цвет ссылок при наведении */
+        }
+
+@media (max-width: 800px) {
+    #about img {
+        width: 500px;
+    }
 }
 
-footer a:hover {
-    color: #f0a500; /* Цвет ссылок при наведении */
+@media (max-width: 600px) {
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Vertical alignment */
+        align-items: center;     /* Center items on the cross axis */
+    }
+    nav a {
+        font-size: calc(16px + 4px); /* Increase font size by 4px */
+
+    }
+
+    #about img {
+        width: 100%; /* Force image width to 100% on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    table {
+        font-size: calc(100% - 2px); /* Reduce font size by 2px. Adjust 100% if the default font size is different */
+    }
+}
+
+@media (max-width: 400px) {
+    table {
+        font-size: calc(100% - 4px); /* Reduce font size by 2px. Adjust 100% if the default font size is different */
+    }
 }

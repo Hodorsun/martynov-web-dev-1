@@ -1,0 +1,75 @@
+.dishes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish {
+    padding: 30px 40px;
+    border-radius: 35px;
+    background-color: white;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    .dish:hover {
+        border: 2px solid tomato;
+    }
+
+        .dish:hover button {
+            background-color: tomato;
+        }
+
+    .dish img {
+        width: 100%;
+        height: auto;
+        border-radius: 35px;
+    }
+
+    .dish .price {
+        font-size: 20px;
+    }
+
+    .dish .name {
+        font-size: 18px;
+    }
+
+    .dish .weight {
+        color: gray;
+    }
+
+    .dish button {
+        background-color: #f1eee9;
+        padding: 10px 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+    }
+
+@media (max-width: 800px) {
+    .dishes-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between; /* Spreads items evenly without space at the edges */
+        gap: 10px; /* This adds gap between items. Adjust as needed */
+    }
+}
+
+@media (max-width: 600px) {
+    .dishes-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 400px) {
+    table {
+        font-size: 14px;
+    }
+}
